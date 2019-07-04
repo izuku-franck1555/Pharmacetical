@@ -1,0 +1,4 @@
+Bundle-Name: connexion-portlet
+Bundle-SymbolicName: com.connexion
+Bundle-Version: 1.0.0
+Export-Package: com.connexion.constants

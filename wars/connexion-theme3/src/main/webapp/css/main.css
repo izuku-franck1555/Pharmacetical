@@ -1,0 +1,42 @@
+body {
+    background-color: #f8f8ff;
+}
+
+#app {
+    padding-bottom: 0px;
+}
+
+.navbar-custom {
+    background-color: #57B846;
+}
+
+.navbar-custom .navbar-brand {
+    color: #fff;
+    font-family: Nunito;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#actif {
+    font-size: 40;
+    font-weight: bold;
+    color: red;
+}
+/*font-family: 'Nunito', sans-serif;
