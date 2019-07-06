@@ -6,4 +6,5 @@ dependencies {
 	compileOnly group: "jstl", name: "jstl"
 	compileOnly group: "org.osgi", name: "osgi.cmpn"
 	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: "3.0.0"
 }
