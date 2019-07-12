@@ -10,5 +10,6 @@ dependencies {
 	compile group: 'com.sun.jna', name: 'jna', version: '3.0.9'
 	runtime group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
 	runtime group: 'com.sun.jna', name: 'jna', version: '3.0.9'
+	compile project (":modules:pharmacie-api")
 	
 }

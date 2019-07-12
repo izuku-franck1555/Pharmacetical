@@ -5,6 +5,8 @@ Export-Package: com.test.constants
 Import-Package: \
   !com.sun.*,\
   !junit.*,\
+  !com.pharmacie.model.*,\
+  !com.pharmacie.service.*,\
   !org.apache.crimson.jaxp,\
   !org.apache.jcp.xml.dsig.internal.dom,\
   !org.apache.poi.hdgf.extractor,\
