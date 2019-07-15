@@ -45,4 +45,16 @@ public class AssistantService {
 			return null;
 		}
 	}
+	
+	// RENVOIE UN ASSISTANT A PARTIR DE SON ID
+	public static Assistant getAssistantWithId(int id) throws SQLException {
+		Assistant a;
+		java.sql.Connection con = Connection.connect();
+		PreparedStatement stmt = con.prepareStatement("SELECT * FROM assistant where idassistant = ?");
+		stmt.setInt(1, id);
+		ResultSet result = stmt.executeQuery();
+		result.next();
+		a = new Assistant(result.getInt(1), result.getInt(2), result.getString(3), result.getString(4), result.getString(5), result.getString(6), result.getString(7));
+		return a;
+	}
 }

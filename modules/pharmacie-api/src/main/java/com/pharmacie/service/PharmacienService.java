@@ -46,4 +46,16 @@ public class PharmacienService {
 			return null;
 		}
 	}
+	
+	// RENVOIE UN PHARMACIEN A PARTIR DE SON ID
+	public static Pharmacien getPharmacienWithId(int id) throws SQLException {
+		Pharmacien p;
+		java.sql.Connection con = Connection.connect();
+		PreparedStatement stmt = con.prepareStatement("SELECT * FROM pharmacien where idpharmacien = ?");
+		stmt.setInt(1, id);
+		ResultSet result = stmt.executeQuery();
+		result.next();
+		p = new Pharmacien(result.getInt(1), result.getString(2), result.getString(3), result.getString(4), result.getString(5), result.getString(6));
+		return p;
+	}
 }

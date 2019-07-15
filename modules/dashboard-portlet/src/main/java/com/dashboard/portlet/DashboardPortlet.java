@@ -3,8 +3,13 @@ package com.dashboard.portlet;
 import com.dashboard.constants.DashboardPortletKeys;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.pharmacie.model.Assistant;
+import com.pharmacie.model.Pharmacien;
+import com.pharmacie.service.AssistantService;
+import com.pharmacie.service.PharmacienService;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
@@ -39,19 +44,30 @@ public class DashboardPortlet extends MVCPortlet {
 			throws IOException, PortletException {
 		// TODO Auto-generated method stub
 		PortletSession session = renderRequest.getPortletSession();
-		String statut = (String) session.getAttribute("statutConnexion", PortletSession.APPLICATION_SCOPE);
-		Integer id = (Integer) session.getAttribute("idPharmacien", PortletSession.APPLICATION_SCOPE);
-		if(id != null) {
-			System.out.println("Vous etes un pharmacien ayant pour identifiant : " + id + " et pour statut : " + statut);
+		Integer idP = (Integer) session.getAttribute("idPharmacien", PortletSession.APPLICATION_SCOPE);
+		Integer idA = (Integer) session.getAttribute("idAssistant", PortletSession.APPLICATION_SCOPE);
+		if(idP != null) {
+			System.out.println("Vous etes un pharmacien ayant pour identifiant : " + idP );
+			try {
+				Pharmacien p = PharmacienService.getPharmacienWithId(idP);
+				renderRequest.setAttribute("personne", p);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			super.render(renderRequest, renderResponse);
+			
+		} else if(idA != null) {
+			System.out.println("Vous etes un assistant ayant pour identifiant : " + idA);
+			try {
+				Assistant a = AssistantService.getAssistantWithId(idA);
+				renderRequest.setAttribute("personne", a);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			super.render(renderRequest, renderResponse);
 		} else {
-			id = (Integer) session.getAttribute("idAssistant", PortletSession.APPLICATION_SCOPE);
-			System.out.println("Vous etes un assistant ayant pour identifiant : " + id + " et pour statut : " + statut);
+			System.out.println("Vous devez d' abord vous connectez pour acceder au dashboard !");
+			this.include("/redirect.jsp", renderRequest, renderResponse);
 		}
-		super.render(renderRequest, renderResponse);
 	}
-	
-	
-	
-	
-	
 }

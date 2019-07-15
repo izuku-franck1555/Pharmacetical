@@ -10,11 +10,10 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	<@liferay_util["include"] page=top_head_include />
-	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="${pathImg}/favicon.ico"/>
 </head>
 
-<body class="${css_class}">
+<body class="${css_class}" style="overflow-x: hidden;">
 
 <@liferay_ui["quick-access"] contentId="#main-content" />
 
@@ -39,19 +38,17 @@
 	                    		<img src="${pathImg}/messages.png" width="30" height="25"> 
 	                    		<span class="number-messages"> 10 </span>
 	                    	</li>
-	                    	<li class="nav-item button-nav">
-	                    		<img src="${pathImg}/settings.png" width="28" height="23"> 
-	                    	</li>
 	                        <li class="nav-item">
-	                          	<div class="dropdown">
-		                          	<button class="drop-button dropdown-toggle button-nav" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	  									Franck Tonle
-	  								</button>
-	  								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	    								<a class="dropdown-item" href="#">Parametres</a>
-	    								<a class="dropdown-item" href="#">Deconnexion</a>
-	  								</div>
-	  							</div>
+	                        	<img src="${pathImg}/settings.png" width="28" height="23">
+	                          	<div class="drop">
+								  <button class="dropbut">
+								  	Paramètres
+								  	<img src="${pathImg}/fleche2.png">
+								  </button>
+								  <div class="drop-content">
+								  <a href="http://localhost:8080/web/guest/connexion">Deconnexion</a>
+								  </div>
+								</div>
 	                        </li>
 	                    </ul>
 	                </div>
@@ -85,9 +82,10 @@
         <!-- Ending Footer-->
 	</footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="${pathJs}/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="${pathJs}/bootstrap.min.js"></script>
+<script src="${pathJs}/notiny.min.js"></script>
 <@liferay_util["include"] page=body_bottom_include />
 
 <@liferay_util["include"] page=bottom_include />

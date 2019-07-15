@@ -7,7 +7,7 @@
 	  			<a href="#1"><span class="box-app-link"></span></a>
 		  		<table style="width:100%">
 		  			<tr><th><img src="<%=request.getContextPath()%>/images/gest-vente-mod.png" width="98" height="98"></th></tr>
-		  			<tr><th style="text-align: center;">Gestionnaire de ventes</th></tr>
+		  			<tr><th style="text-align: center;">Gestionnaire de ventes </th></tr>
 		  		</table>
 	  		</div>
   			<div class="p-4 box-app">
@@ -40,4 +40,12 @@
 	  		</div>
 	  	</div>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$.notiny.addTheme('green', {
+  				notification_class: 'notiny-theme-green mytheme' 
+			});
+			$.notiny({ text: 'BIENVENUE ${personne.nom} ! ', position: 'right-top', theme: 'green', width : '400'});
+		});
+	</script>
 <!-- Ending Dashboard-->

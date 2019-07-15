@@ -2,6 +2,26 @@
 
 /* inject:imports */
 /* endinject */
+
+/* fonts */
+
+@font-face {
+    font-family : Nunito;
+    src : url("fonts/Nunito-Regular.ttf");
+    font-weight : 500;
+}
+
+@font-face {
+    font-family : Nunito;
+    src : url("fonts/Nunito-Bold.ttf");
+    font-weight : 700;
+}
+
+@font-face {
+    font-family : Nunito;
+    src : url("fonts/Nunito-Light.ttf");
+    font-weight : 100;
+}
   
   * {
       margin: 0px; 
@@ -379,6 +399,7 @@
   }
 
 body {
+	overflow-x: hidden;
 	color: #fff;
     background-color: #f8f8ff;
 }

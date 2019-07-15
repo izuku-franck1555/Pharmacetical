@@ -71,7 +71,7 @@ public class Assistant {
 		System.out.println("--------> Id Pharmacien : " + idpharmacien);
 		System.out.println("--------> Nom           : " + nom);
 		System.out.println("--------> Prenom        : " + prenom);
-		System.out.println("--------> Contact       : " + passwd);
+		System.out.println("--------> Contact       : " + contact);
 		System.out.println("--------> Login         : " + login);
 		System.out.println("--------> Password      : " + passwd);
 	}
