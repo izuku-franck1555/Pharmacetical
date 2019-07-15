@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" href="${pathImg}/favicon.ico"/>
 </head>
 
-<body class="${css_class}" style="overflow-x: hidden;">
+<body class="${css_class}" style="overflow-x: hidden;"> 
 
 <@liferay_ui["quick-access"] contentId="#main-content" />
 
@@ -46,7 +46,7 @@
 								  	<img src="${pathImg}/fleche2.png">
 								  </button>
 								  <div class="drop-content">
-								  <a href="http://localhost:8080/web/guest/connexion">Deconnexion</a>
+								  <a href="${company_url}/connexion">Deconnexion</a>
 								  </div>
 								</div>
 	                        </li>

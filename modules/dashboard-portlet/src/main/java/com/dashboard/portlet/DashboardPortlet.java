@@ -4,12 +4,15 @@ import com.dashboard.constants.DashboardPortletKeys;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.pharmacie.model.Assistant;
+import com.pharmacie.model.Module;
 import com.pharmacie.model.Pharmacien;
 import com.pharmacie.service.AssistantService;
+import com.pharmacie.service.ModuleService;
 import com.pharmacie.service.PharmacienService;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
@@ -51,6 +54,8 @@ public class DashboardPortlet extends MVCPortlet {
 			try {
 				Pharmacien p = PharmacienService.getPharmacienWithId(idP);
 				renderRequest.setAttribute("personne", p);
+				List<Module> list = ModuleService.getPharmacienModuleList();
+				renderRequest.setAttribute("list", list);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -61,6 +66,8 @@ public class DashboardPortlet extends MVCPortlet {
 			try {
 				Assistant a = AssistantService.getAssistantWithId(idA);
 				renderRequest.setAttribute("personne", a);
+				List<Module> list = ModuleService.getAssistantModuleList(idA);
+				renderRequest.setAttribute("list", list);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
