@@ -5,7 +5,9 @@ Export-Package: \
 	com.gest.ventes.constants,\
 	com.pharmacie.model,\
 	com.pharmacie.service,\
-	com.bd
+	com.bd,\
+	model,\
+	bind
 Import-Package: \
   !com.sun.*,\
   !junit.*,\

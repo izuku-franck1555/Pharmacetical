@@ -14,6 +14,8 @@ import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
 import javax.portlet.ProcessAction;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -28,6 +30,7 @@ import model.ConnectDB;
 		property = {
 				"com.liferay.portlet.display-category=category.sample",
 				"com.liferay.portlet.instanceable=true",
+				"com.liferay.portlet.requires-namespaced-parameters=false",
 				"javax.portlet.init-param.template-path=/",
 				"javax.portlet.init-param.view-template=/Ajouter_vente.jsp",
 				"javax.portlet.name=" + GestionVentesPortletKeys.GestionVentes,
@@ -37,11 +40,19 @@ import model.ConnectDB;
 		service = Portlet.class
 		)
 public class GestionVentesPortlet extends MVCPortlet {
+	
+	@Override
+	public void render(RenderRequest renderRequest, RenderResponse renderResponse)
+			throws IOException, PortletException {
+		// TODO Auto-generated method stub
+		super.render(renderRequest, renderResponse);
+	}
 
 	@ProcessAction(name="AfficherVente")
 	public void AfficherVente(ActionRequest request, ActionResponse response)
 			throws IOException, PortletException {
 		int compteur=ParamUtil.getInteger(request, "conteur");
+		System.out.println("Le compteur est : " + compteur);
 		int cpt=1;
 		int ct=1;
 		String tableau="";
@@ -89,6 +100,7 @@ public class GestionVentesPortlet extends MVCPortlet {
 		request.setAttribute("produit", tableau);
 		request.setAttribute("produits", tableau1);
 		request.setAttribute("total", total);
+		System.out.println("Le tableau est : " + tableau);
 		response.getRenderParameters().setValue("mvcPath", "/Affiche_de_la_vente.jsp");
 	}
 

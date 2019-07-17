@@ -1,8 +1,4 @@
 <%@ include file="/init.jsp" %>
-	<portlet:renderURL name="AjouterVente" var="AjouterVenteURL" />
-	<portlet:renderURL name="ListerVente" var="ListerVenteURL" />
-	<portlet:renderURL name="ModifierVente" var="ModifierVenteURL" />
-	<portlet:renderURL name="GenererTicket" var="GenererTicketURL" />
 	<portlet:actionURL name="AfficherVente" var="AfficherVenteURL" />
 	
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.1.min.js"></script>
