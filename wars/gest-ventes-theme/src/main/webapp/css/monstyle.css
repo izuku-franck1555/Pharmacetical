@@ -1,0 +1,115 @@
+@charset "ISO-8859-1";
+
+body{
+	color:white;
+}
+
+.corps{
+	top:6em;
+	padding:1.5em;
+	margin:auto;
+	opacity:0.8;
+	border-radius:4px 4px 4px 4px;
+	background-color:  green;
+	box-shadow: 1em 1em 2em gray;
+}
+
+.bouton-group{
+	width:70%;
+	padding:1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;	
+}
+
+.soumission{
+	
+}
+
+.annulation{
+	
+}
+
+.champ-texte{
+	margin:auto;
+	margin-bottom:1em;
+	border-radius:3px 3px 3px 3px;
+	background-color:white;
+	width: 70%;
+	height:3em;
+}
+
+.item-champ-texte{
+	width:45%;
+	margin-bottom:1em;
+	margin-left:1em;
+	border-radius:3px 3px 3px 3px;
+	background-color:white;
+	height:3em;
+}
+
+.area{
+	height:5em;
+	color:gray;
+}
+.menu{
+	position:fixed;
+	display:flex;
+	flex-direction:row;
+	height:4em;
+	padding:1em;
+	background-color: rgb(0,202,0);
+	justify-content: center;
+	box-shadow: 1em 1em 3em gray;
+	z-index: 100;
+}
+
+.item-menu{
+	padding:0.3em;
+	display:inline-block;	
+	height:2em;
+}
+
+.item-menu:hover{
+	display:inline-block;	
+	height:2em;
+	background-color:rgb(0,100,0);
+}
+
+
+a:hover{
+	text-decoration: none;
+	color:white;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.activer{
+	background-color: rgb(0,150,0);
+	color:white;
+}
+
+td{
+	background-color: white;
+	color:black;	
+}
+
+.title{
+	text-transform: uppercase;	
+}
+
+.bouton-single{
+	display:flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.champ-group{
+	padding:1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;	
+}

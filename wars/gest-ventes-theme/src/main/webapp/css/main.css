@@ -1,0 +1,95 @@
+body {
+    background-color: #DCDCDC;
+}
+
+#app {
+    padding-bottom: 0px;
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.navbar-custom {
+    background-color: #57B846;
+}
+
+.navbar-custom .navbar-brand {
+    color: #fff;
+    font-family: Nunito;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#actif {
+    font-size: 40;
+    font-weight: bold;
+    color: red;
+}
+
+.nav-item {
+    display: inherit;
+}
+
+.dropbut {
+    font-family: Nunito;
+    border: none;
+    color: #fff;
+    background-color: #57B846;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.drop {
+    margin-top: 10px;
+    margin-bottom: -8px;
+  position: relative;
+  display: inline-block;
+}
+
+.drop-content {
+  display: none;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #fff;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.drop-content a {
+    font-size: 16px;
+  color: #212529;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.drop-content a:hover {background-color: #f1f1f1}
+
+.drop:hover .drop-content {
+  display: block;
+}
+
+.drop:hover {
+  background-color: #3e8e41;
+}

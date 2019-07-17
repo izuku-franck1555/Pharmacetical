@@ -1,4 +1,0 @@
-Bundle-Name: gest-ventes-portlet
-Bundle-SymbolicName: com.gest.ventes
-Bundle-Version: 1.0.0
-Export-Package: com.gest.ventes.constants
